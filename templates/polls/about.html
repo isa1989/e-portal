@@ -1,0 +1,12 @@
+{% include 'polls/header.html' %}
+<br><br>
+<div class="container">
+{% for about in about_list %}
+
+<h2>{{about.title_a|safe}}</h2><hr>
+<p>{{about.content_a|safe}}</p>
+
+{% endfor %}
+</div>
+{% include 'polls/footer.html' %}
+

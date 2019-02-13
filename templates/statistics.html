@@ -1,0 +1,39 @@
+{% include 'polls/header2.html' %}
+{% load static %}
+
+
+<div class="container-fluid statistics">
+	<div class="container statistics_back">
+	<h1>Statistikanın ümumi nəzəriyyəsi</h1>
+</div>
+</div>
+
+
+  <div class="container">
+  	<div class="statistics_main">
+				<p>Aşağıdakı dərsləri öyrənməklə siz Statistikanın ümumi nəzəriyyəsini ən yaxşı səviyyədə mənimsəyə bilərsiniz.</p>
+
+		<div class="row">
+			<div class="col-md-12">
+				{% for tit in title_l %}
+				<button href="#ch1" class=" stat_chapters" data-toggle="collapse"> {{tit.title}}</button>
+						{% endfor %}
+			        <div id="ch1" class="collapse">
+						<ul class="list-unstyled">
+							{% for tit in title %}
+							<li><a href="">{{tit.title}}</a></li>
+                            {% endfor %}
+
+						</ul>
+			        </div>
+
+
+		</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+{% include 'polls/footer2.html' %}

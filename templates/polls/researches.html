@@ -1,0 +1,184 @@
+{% include 'polls/header2.html' %}
+{% load static %}
+
+
+<div class="container-fluid  all-services">
+   <div class="container">
+       <br>
+      <h1>Azərbaycan Respublikasının müvafiq məcəllə və qanunları </h1>
+      <hr>
+      <div class="services-tab">
+         <div class="row">
+            <div class="col-md-3 services_tab_heads">
+               <!-- <h4>Mövzular</h4> -->
+               <ul class="services_tab_head">
+
+                  {% for stat in stat  %}
+                  <div class="container-fluid ">
+                <li rel= "{{stat.id}} ">{{stat.title}}</li>
+                  </div>
+                  {% endfor %}
+
+               </ul>
+            </div>
+            <div class="col-md-9 tb-content">
+                 {% for stat in stat %}
+               <div class="services_container">
+
+
+
+
+                  <div id="{{stat.id}}" class="services_content">
+                      <h3>{{stat.title|safe }}</h3>
+
+
+
+
+
+
+                     <h3>{{stat.content|truncatechars:1000|safe  }}</h3>
+
+
+
+                     <td><a href="{{stat.upload.upload.url}}">yüklə <i class="fa fa-download"></i></a></td>
+
+
+                  </div>
+
+                   </div>
+                   {% endfor %}
+
+
+              </div>
+               </div>
+            </div>
+
+         </div>
+
+   </div>
+</div>
+<script>
+   $(".services_content").hide();
+   $(".services_content:first").show();
+
+   $(".services_tab_head li").click(function() {
+
+     $(".services_content").hide();
+     var activeTab = $(this).attr("rel");
+     $("#"+activeTab).fadeIn();
+     $(".services_tab_head li").removeClass("active");
+     $(this).addClass("active");
+   });
+</script>
+
+<style>
+.services_content a {
+	float: right;
+	background-color: #2E7BA4;
+	border: 1.5px solid #2E7BA4;
+	padding: 2px 15px;
+	font-size: 15px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+
+    .all-services h1 {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+ul.business {
+  list-style-type: circle;
+}
+
+.services_content ul {
+  padding-left: 1px;
+}
+
+.services_tab_head {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+  height: 500px;
+  width: 255px;
+  overflow-x: auto;
+
+}
+
+.services_tab_head li {
+  margin-right: 1px;
+  cursor: pointer;
+  padding: 10px 7px;
+  /* height: 2px;
+  line-height: 11px;*/
+  color: #333;
+  border-bottom: 0px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+}
+
+.services_tab_head li:hover {
+  color: #676767;
+}
+
+.services_tab_head li.active {
+  border-left: 7px solid #168BCD;
+  background-color: #168BCD;
+  color:#fff;
+  display: block;
+  transition-duration: 0.3s;
+  font-size: 16px;
+}
+
+.services_container {
+  width: 100%;
+}
+
+.services_container p {
+  text-align: justify;
+  text-indent: 50px;
+  font-size: 16px;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+.services_content {
+  padding: 5px;
+}
+
+.services_content ul {
+  font-size: 16px;
+  list-style: none;
+}
+
+.services_content> :first-child {
+  margin-top: 0;
+}
+
+
+
+.tab-img {
+  padding: 0;
+}
+
+.tab-img img {
+  height: 16vw;
+  width: 100%;
+  margin:0 0 20px 0;
+  object-fit: cover;
+}
+
+.tb-content{
+ border-left: 1px solid #dddddd;
+}
+
+</style>
+
+
+{% include 'polls/footer.html' %}

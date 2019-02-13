@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>CSRSI e-learning Portal</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="icon" type="img/png" href="{% static 'img/logo_win.png' %}">
+
+</head>
+
+<body>
+<div class="overlay"></div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+               <a href=""><img src="{% static 'img/logo_win.png' %}" width="259" alt=""></a>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"><i class="far fa-bookmark"></i> Modules : Food balances<i class="fas fa-angle-down float-right"></i></a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M1.pdf' %}" target="_blank" aria-label="aaa" >1.  Introduction</a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M2.pdf' %}" target="_blank">2. Basic Identities</a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M3.pdf' %}" target="_blank">3. Supply Utilization Accounts</a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M4.pdf' %}" target="_blank">4. Data comparability</a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M5.pdf' %}" target="_blank">5.  Official data sources: Production</a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M6.pdf' %}" target="_blank">6. Features of trade data: Trade(import and export)</a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M7.pdf' %}" target="_blank">7. Official data sources: Reserve, reserve changes</a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M8.pdf' %}" target="_blank">8. Official data sources: Food availability and loss </a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M9.pdf' %}" target="_blank">9.  Official data sources: food processing and industrial use </a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M10.pdf' %}" target="_blank">10. Official data sources: Feed and seeds </a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M11.pdf' %}" target="_blank">11. Official data sources: Tourist food and additional parameters </a>
+                        </li>
+                        <li>
+                          <a href="{% static 'erzaq/FBS_M12.pdf' %}" target="_blank">12. Filling in an SUA table</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% static 'haciyev/Haciyev.pdf' %}"><i class="fab fa-leanpub"></i> General theory of statistics</a>
+                </li>
+
+                <li>
+                    <a href="/polls/index"><i class="fas fa-user-cog"></i> Scientific-Researches</a>
+                </li>
+                <li>
+                    <a href="/polls/contact"><i class="far fa-paper-plane"></i> Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+<!-- Page Content  -->
+<div id="content">
+   <nav class="navbar navbar-expand-lg" id="navbar_content">
+      <div class="container-fluid">
+         <button type="button" id="sidebarCollapse" class="btn btn-sm">
+        <i class="fas fa-chevron-left fa-sm"></i>
+         <span> Menu</span>
+         </button>
+
+
+         <!--     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+            </button> -->
+         <!--  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Page</a>
+                </li>
+            </ul>
+            </div>
+
+
+      </div>
+<div class="dropdown user_dropdown">
+ <a href="user.php"><button class="dropbtn"><i class="far fa-user"></i> Namiq Namazov</button></a>
+  <div class="dropdown-content">
+    <a href="user.php">Profili yenilə</a>
+    <a href="user.php">Şifrəni dəyiş</a>
+    <a href="user.php">Çıxış</a>
+  </div>
+</div>-->
+   </nav>
+
+<div id="main_content">
+

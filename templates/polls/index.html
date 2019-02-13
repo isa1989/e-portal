@@ -1,0 +1,195 @@
+{% include 'polls/header.html' %}
+{% load static %}
+
+<style>
+
+.index_aboutus {
+  margin:100px 0;
+}
+
+.index_aboutus>h1{
+  text-align: center;
+  margin: 40px 0;
+}
+
+ .index_aboutus h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 49px;
+  height: 3px;
+  margin-top: 9px;
+  background: #329185i;
+ /* bottom: 0;*/
+  left: calc(50% - 20px);
+}
+  .index_aboutus>p{
+text-align: center;
+}
+
+.full_index_learn {
+  background: url("/static/img/inde.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 700px;
+  width: 100%;
+  padding: 80px 0;
+  margin:0;
+}
+
+.index_learn {
+padding: 0;
+color: #4B4B4B;
+}
+
+.index_learn h2{
+font-weight: bold;
+padding: 19px 0;
+}
+</style>
+
+
+<div class="container">
+  <div class="index_aboutus">
+    <h1>About us</h1>
+    <p> Our activity consists of the collection of data sources in various directions, the creation of the indicators system and databases, the development of existing statistical methods and the preparation of new methods, conduction of statistical surveys, sample design, conduction of modelling and forecasting of the analytical studies and the econometric analysis of statistical data, establishing of dynamic series, output tables and related charts. <a href="about.php">More <i class="fas fa-long-arrow-alt-right"></i></a> </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="aboutus_3col">
+<style>
+
+.aboutus_3col {
+  margin:50px 0;
+}
+
+.about-col {
+  background: #fff;
+  border-radius: 9px;
+  /*border-radius: 0 0 4px 4px;*/
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: ease 200ms;
+  cursor: pointer;
+  min-height: 400px;
+}
+
+.about-col:hover {
+box-shadow: 0px 15px 33px -9px rgba(100,100,100,0.59);
+}
+
+.about-col .img {
+  position: relative;
+}
+
+.about-col .img img {
+  border-radius: 4px 4px 0 0;
+}
+
+.about-col .icon {
+  width: 64px;
+  height: 64px;
+  padding-top: 12px;
+  text-align: center;
+  position: absolute;
+  background-color: #2098D7;
+  border-radius: 50%;
+  text-align: center;
+  border: 4px solid #fff;
+  left: calc( 50% - 32px);
+  bottom: -30px;
+  transition: 0.3s;
+}
+
+.about-col i {
+  font-size: 35px;
+  /*line-height: 1;*/
+  color: #fff;
+  transition: 0.3s;
+}
+
+.about-col:hover .icon {
+  background-color: #fff;
+}
+
+.about-col:hover i {
+  color: #2098D7;
+}
+
+.about-col h2 {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 20px;
+  margin: 40px 0 12px 0;
+}
+
+.about-col p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  margin-bottom: 0;
+  padding: 0 20px 20px 20px;
+}
+</style>
+
+       <div class="row about-cols">
+          <div class="col-md-4">
+            <div class="about-col">
+              <div class="img">
+                <img src="{% static 'img/about-mission.jpg' %}" alt="" class="img-fluid">
+                <div class="icon"><i class="fa fa-users"></i></div>
+              </div>
+
+              <h2 class="title">Outstanding experience</h2>
+              <p>Lessons are being developed by the experienced team of the Center.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="about-col">
+              <div class="img">
+                <img src="{% static 'img/about-plan.jpg' %}" alt="" class="img-fluid">
+                <div class="icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+              </div>
+              <h2 class="title">Comfortable use</h2>
+              <p>Online lessons are designed for the convenience of users</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="about-col">
+              <div class="img">
+                <img src="{% static 'img/about-vision.jpg' %}" alt="" class="img-fluid">
+                <div class="icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+              </div>
+              <h2 class="title">Check your knowledge</h2>
+              <p>Take part in the online test and learn the degree of mastering the information you have</p>
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+
+<div class="container-fluid full_index_learn">
+  <div class="container ">
+    <div class="index_learn">
+    <div class="col-md-6">
+      <h2>Learn all about statistics on this portal!</h2>
+      <p>You can learn all about statistics on CSRSI e-Learning Portal.</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- End of row -->
+{% include 'polls/footer.html' %}
+
+
+
+
+

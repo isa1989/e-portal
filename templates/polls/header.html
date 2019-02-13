@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>ETSİM - Online Tədris Portalı</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <link href="{% static 'css/stylee.css' %}" rel="stylesheet">
+       <link rel="icon" type="img/png" href="{% static 'img/logo_win.png' %}">
+
+
+   </head>
+   <body>
+  <a href="#" id="c-go-top" class="c-go-top"><i class="fa fa-chevron-up fa-fw"></i></a>
+
+<style>
+  /*FIRST PIC*/
+.first_pic {
+  background: linear-gradient(rgba(252,252,252,0.85),rgba(222,222,222,0.85)),  url("/static/img/indexx.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 530px;
+  width: 100%;
+  padding: 30px 0 ;
+}
+
+/*=== Trigger  ===*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+/*=== Optional Delays, change values here  ===*/
+.one {
+-webkit-animation-delay: 0.5s;
+-moz-animation-delay: 0.5s;
+animation-delay: 0.5s;
+}
+
+/*=== Animations start here  ===*/
+
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+
+.first_pic_content p.f_p_c1  {
+  margin-top: 50PX;
+  padding-top: 10px;
+  font-size: 59px;
+  color: #333;
+  text-align: right;
+  padding-bottom: 2px;
+  line-height: 0.8;
+
+}
+
+.first_pic_content p.f_p_c2  {
+  padding-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: right;
+   line-height: 0.98;
+
+}
+
+.first_pic .start-now {
+ /* background: linear-gradient(149deg,#E46143,#E43949);*/
+  background: linear-gradient(to right, #42275a, #734b6d);
+  border-radius: 30PX;
+  padding: 12px 35px;
+  color: #fff;
+  font-size: 18px;
+  float: right;
+  box-shadow: 0px 5px 10px -2px rgba(123, 51, 112, 0.6);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  margin:10px 0 0 0;
+}
+
+.first_pic .start-now:hover {
+  box-shadow: 0px 5px 15px 1px rgba(123, 51, 112,0.55);
+}
+/*FIRST PIC*/
+</style>
+
+
+<div class="container-fluid first_pic">
+  <div class="container ">
+    <div class="first_pic_content ">
+    <a class="navbar-brand" href="/polls"><img src="{% static 'img/logo_new.png' %}"  class="main_logo img-responsive" width="349"></a>
+    <p class="f_p_c1 animate fadeInUp one">Learn statistics with us</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6 text-right">
+          <p class="f_p_c2 animate fadeInUp one">Our activity consists of the collection of data sources in various directions, the creation of the indicators system and databases, the development of existing statistical methods and the preparation of new methods, conduction of statistical surveys, sample design, conduction of modelling and forecasting of the analytical studies and the econometric analysis of statistical data, establishing of dynamic series, output tables and related charts.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+   <a href="/polls/index2" target="_blank" class="start-now animate fadeInUp one">GET STARTED</a>
+ </div>
+</div>
+      <nav class="navbar navbar-expand-sm sidebarNavigation " id="navbar">
+         <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+            <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+               <ul class="nav navbar-nav nav-flex-icons ">
+                  <li class="nav-item">
+                     <a class="nav-link" href="/polls">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/polls/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/polls/xidmet">Services</a>
+                  </li>
+
+                  <li class="nav-item">
+                     <a class="nav-link" href="/polls/contact">Contact</a>
+                  </li>
+                  <!--  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                         aria-expanded="false">Dropdown</a>
+                     <div class="dropdown-menu" aria-labelledby="dropdown01">
+                         <a class="dropdown-item" href="#">Action</a>
+                         <a class="dropdown-item" href="#">Another action</a>
+                         <a class="dropdown-item" href="#">Something else here</a>
+                     </div>
+                     </li> -->
+               </ul>
+               <form class="mx-0 ml-auto d-inline w-30">
+                  <div class="input-group search">
+                     <input type="text" class="form-control border-right-0" placeholder=" ">
+                     <span class="input-group-append">
+                     <button class="btn btn-sm border border-0" type="button">
+                     <i class="fa fa-search"></i>
+                     </button>
+                     </span>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </nav>
+
+
+
+
+
+
+<script>
+$(function() {
+  // Amount of scrolling before button is shown/hidden.
+  var offset = 100;
+
+  // Fade duration
+  var duration = 500;
+
+  // Toggle view of button when scrolling.
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > offset) {
+      $('#c-go-top').fadeIn(duration);
+    } else {
+      $('#c-go-top').fadeOut(duration);
+    }
+  });
+
+  // Scroll to top when button is clicked.
+  $('#c-go-top').click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, duration);
+    return false;
+  });
+});
+</script>
+
+<script>
+window.onload = function () {
+   if (window.jQuery) {
+      $(document).ready(function () {
+         $(".sidebarNavigation .navbar-collapse").hide().clone().appendTo("body").removeAttr("class").addClass("sideMenu").show();
+         $("body").append("<div class='overlay'></div>");
+         $(".navbar-toggle, .navbar-toggler").on("click", function () {
+            $(".sideMenu").addClass($(".sidebarNavigation").attr("data-sidebarClass"));
+            $(".sideMenu, .overlay").toggleClass("open");
+            $(".overlay").on("click", function () {
+               $(this).removeClass("open");
+               $(".sideMenu").removeClass("open")
+            })
+         });
+         $("body").on("click", ".sideMenu.open .nav-item", function () {
+            if (!$(this).hasClass("dropdown")) {
+               $(".sideMenu, .overlay").toggleClass("open")
+            }
+         });
+         $(window).resize(function () {
+            if ($(".navbar-toggler").is(":hidden")) {
+               $(".sideMenu, .overlay").hide()
+            } else {
+               $(".sideMenu, .overlay").show()
+            }
+         })
+      })
+   } else {
+      console.log("sidebarNavigation Requires jQuery")
+   }
+}
+
+</script>
+
+
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>

@@ -1,0 +1,62 @@
+{% include 'polls/header.html' %}
+
+<div class="services-cards">
+	<h1>Services</h1>
+
+
+    <div class="container">
+
+  <hr>
+  <div class="row">
+    {% for xidmet in xidmet_list%}
+    <div class="col-md-4 col-sm-12">
+      <div class="card mb-4"> <!-- -->
+        <div class="card-header text-center ">
+          <h5>{{xidmet.title_s|safe}}</h5>
+        </div>
+        <div class="card-body">
+            <div>
+            <p>{{xidmet.content_s|truncatechars:150|safe}}</p>
+
+            <!-- MODAL BUTTON STARTS -->
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal{{ xidmet.id }}">
+           More
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal fade" id="myModal{{ xidmet.id }}">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">{{xidmet.title_s}}</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                   {{xidmet.content_s}}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--MODAL BUTTON ENDS  -->
+          </div>
+        </div>
+      </div><!-- -->
+
+    </div>
+     {% endfor %}
+  </div>
+</div>
+
+
+{% include 'polls/footer.html' %}
+</div>

@@ -1,0 +1,60 @@
+{% include 'polls/header2.html' %}
+{% load static %}
+
+
+<div class="container-fluid index">
+  <div class="container">
+  	<div class="index_main">
+		<div class="row">
+			<div class="col-md-7">
+				<h1>Learn statistics with us!</h1>
+		      <p>Our activity consists of the collection of data sources in various directions, the creation of the indicators system and databases, the development of existing statistical methods and the preparation of new methods, conduction of statistical surveys, sample design, conduction of modelling and forecasting of the analytical studies and the econometric analysis of statistical data, establishing of dynamic series, output tables and related charts.</p>
+				<a href="/polls/static">GET STARTED</a>
+		   </div>
+		</div>
+	</div>
+</div>
+</div>
+
+<style>
+.index {
+  background: url("/static/img/inde.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+  width: 100%;
+  padding: 90px 0;
+}
+.index_main {
+	padding:50px 0;
+}
+
+.index_main p{
+	padding-bottom: 20px;
+}
+
+.index_main h1 {
+	font-size: 50px;
+	color: #484848;
+	padding: 20px 0;
+	}
+
+.index_main a {
+	font-size:19px;
+	padding: 18.5px 30px;
+	background: linear-gradient(19deg,#18CE8C,#279867);
+	color: #fff;
+	border-radius: 30px;
+	box-shadow: 0px 9px 19px -5px rgba(18, 201, 122,0.9);
+}
+
+.index_main a:hover {
+	box-shadow: none;
+}
+
+</style>
+
+
+
+{% include 'polls/footer2.html' %}

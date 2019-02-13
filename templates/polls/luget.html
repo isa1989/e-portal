@@ -1,0 +1,93 @@
+{% include 'polls/header.html' %}
+
+<div id="dict_scroll">
+<div class="container">
+
+   <div class="dict-tab">
+ <h1>Statistik lüğət</h1>
+
+      <ul class="tabs letters">
+          {% for word in word_l %}
+        <li><a href="#tab1">{{word.alpha}}</a></li>
+{% endfor %}
+      </ul>
+
+
+<!-- A start-->
+<div id="tab1" class="tab_content">
+
+   <div class="container">
+      <div class="row"><!-- row -->
+
+        <div class="col-md-4 st">
+<h3>Anlayışın adı</h3>
+            <hr>
+            <ul class="tabs sub-tab">
+{% for word in word_e %}
+               <!-- Add tabs here -->
+               <a href="#tab1-1{{word.id}}">
+                  <li>{{word.word}}</li>
+               </a>
+  {% endfor %}
+            </ul>
+         </div>
+          <div class="col-md-8">
+             <h3>Anlayışın izahı</h3>
+              <hr>
+              {% for word in word_e %}
+            <div id="tab1-1{{word.id}}">
+               <p>{{word.word_exp}}</p>
+            </div>
+              {% endfor %}
+          </div>
+
+      </div><!-- row -->
+    </div>
+</div>
+<!-- A end-->
+
+
+
+
+   </div>
+</div>
+</div>
+<script>
+
+    jQuery('ul.tabs').each(function(){
+    // For each set of tabs, we want to keep track of
+    // which tab is active and it's associated content
+    var $active, $content, $links = jQuery(this).find('a');
+
+    // If the location.hash matches one of the links, use that as the active tab.
+    // If no match is found, use the first link as the initial active tab.
+    $active = jQuery($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+    $active.addClass('active');
+
+    $content = $($active[0].hash);
+
+    // Hide the remaining content
+    $links.not($active).each(function () {
+        jQuery(this.hash).hide();
+    });
+
+    // Bind the click event handler
+    jQuery(this).on('click', 'a', function(e){
+        // Make the old tab inactive.
+        $active.removeClass('active');
+        $content.hide();
+
+        // Update the variables with the new link and content
+        $active = jQuery(this);
+        $content = jQuery(this.hash);
+
+        // Make the tab active.
+        $active.addClass('active');
+        $content.show();
+
+        // Prevent the anchor's default click action
+        e.preventDefault();
+    });
+});
+
+</script>

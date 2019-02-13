@@ -1,0 +1,5 @@
+def statistics(request):
+    title = Statistics.objects.values()
+    title_l = Model.objects.values()
+    context = {'title': title, 'title_l': title_l}
+    return render(request, 'polls/statistics.html', context)
